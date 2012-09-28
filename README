@@ -1,0 +1,29 @@
+# Installation
+* download source code to your root directory
+* open restapi / config / config.ini 
+  **   update your mysql database credentials
+  **   add api-keys for diff client
+* run restapi/Sample_DB/Contacts.sql and  restapi/Sample_DB/Users.sql under your database
+
+Framework is ready ..
+
+##  On Client side 
+* incrypt your request and call api..
+  you can turn off key validation by adding 
+  return true; in first line of private function validateApiKey($params)
+  [ Defined in restapi/system/core/main.php ]
+
+Current Framework only support GET and POST Request.
+
+Example : 
+  for http://api.vsventure.com/contacts/user_contact?user_id=15 GET call
+  you need /controller/contacts.php [you can find it in source code]
+  and function user_contact_get()
+
+function name must end with call type.
+
+/*
+will add more description soon
+you can email me if you have any question or feature request..
+[nil12285@gmail.com]
+*/
